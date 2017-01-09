@@ -1,6 +1,7 @@
 {
   "name" : "interemotion/zf-image-strategy",
   "description" : "An Image Strategy for Zend MVC based applications using the Imagine OOP library",
+  "license": "MIT",
   "require" : {
     "zendframework/zend-view" : "^2.0",
     "zendframework/zend-servicemanager" : "^2.0",
