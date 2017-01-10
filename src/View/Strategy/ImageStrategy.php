@@ -105,9 +105,10 @@ class ImageStrategy extends AbstractListenerAggregate
         }
 
         $result   = $e->getResult();
+        /* @var $model ImageModel */
         $model = $e->getModel();
         $name = $model->getFileName();
-        $format = $model->getFormat();
+        $format = $model->getImageFormat();
 
         // Populate response
         $response = $e->getResponse();

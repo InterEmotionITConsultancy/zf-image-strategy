@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 0.3 - 2017-01-09
+## 0.3 - 2017-01-10
 
 ### Added
 
@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Changes
 
-- Dependency to zend-mvc
+- Nothing
 
 ### Deprecated
 
@@ -22,7 +22,7 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Fixed
 
-- Nothing.
+- Fixed wrong method call in strategy.
 
 ## 0.2 - 2017-01-09
 
