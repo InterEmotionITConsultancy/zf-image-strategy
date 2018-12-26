@@ -19,7 +19,7 @@ class ImageRenderer implements Renderer
 
     /**
      *
-     * @return mixed
+     * @return Renderer
      */
     public function getEngine()
     {
@@ -33,6 +33,8 @@ class ImageRenderer implements Renderer
     public function setResolver(Resolver $resolver)
     {
         $this->resolver = $resolver;
+
+        return $this;
     }
 
     /**

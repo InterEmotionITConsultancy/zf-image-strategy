@@ -25,7 +25,7 @@ class ImageModel extends ViewModel
     private $imageOptions = array();
 
     /**
-     * @return the $image
+     * @return ImageInterface
      */
     public function getImage()
     {
@@ -33,14 +33,14 @@ class ImageModel extends ViewModel
     }
 
     /**
-     * @param \Imagine\Image\ImageInterface $image
+     * @param ImageInterface $image
      */
     public function setImage(ImageInterface $image)
     {
         $this->image = $image;
     }
     /**
-     * @return the $imageFormat
+     * @return string
      */
     public function getImageFormat()
     {
@@ -79,7 +79,7 @@ class ImageModel extends ViewModel
     }
 
     /**
-     * @return the $imageOptions
+     * @return array
      */
     public function getImageOptions()
     {
@@ -87,7 +87,7 @@ class ImageModel extends ViewModel
     }
 
     /**
-     * @param multitype: $imageOptions
+     * @param array $imageOptions
      */
     public function setImageOptions($imageOptions)
     {

@@ -5,7 +5,7 @@ use InterEmotion\ImageStrategy\View\Model\ImageModel;
 use InterEmotion\ImageStrategy\View\Renderer\ImageRenderer;
 use Zend\EventManager\AbstractListenerAggregate;
 use Zend\EventManager\EventManagerInterface;
-use Zend\View\Model;
+use Zend\Http\PhpEnvironment\Response;
 use Zend\View\ViewEvent;
 
 class ImageStrategy extends AbstractListenerAggregate
@@ -77,14 +77,14 @@ class ImageStrategy extends AbstractListenerAggregate
      * Detect if we should use the ImageRenderer based on model type
      *
      * @param  ViewEvent $e
-     * @return null|ImageRenderer
+     * @return ImageRenderer|null
      */
     public function selectRenderer(ViewEvent $e)
     {
         $model = $e->getModel();
         if (!$model instanceof ImageModel) {
             // no ImageModel; do nothing
-            return;
+            return null;
         }
 
         // ImageModel found
@@ -104,7 +104,7 @@ class ImageStrategy extends AbstractListenerAggregate
             return;
         }
 
-        $result   = $e->getResult();
+        $result = $e->getResult();
         /* @var $model ImageModel */
         $model = $e->getModel();
         $name = $model->getFileName();
@@ -113,9 +113,11 @@ class ImageStrategy extends AbstractListenerAggregate
         // Populate response
         $response = $e->getResponse();
         $response->setContent($result);
-        $headers = $response->getHeaders();
-        $headers->addHeaderLine('Content-Transfer-Encoding', 'binary')
-            ->addHeaderLine('Content-Disposition', 'filename=' . $name . '.' . $format)
-            ->addHeaderLine('Content-Type', 'image/' . $format);
+        if ($response instanceof Response) {
+            $headers = $response->getHeaders();
+            $headers->addHeaderLine('Content-Transfer-Encoding', 'binary')
+                ->addHeaderLine('Content-Disposition', 'filename=' . $name . '.' . $format)
+                ->addHeaderLine('Content-Type', 'image/' . $format);
+        }
     }
 }
