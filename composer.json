@@ -4,7 +4,7 @@
   "license": "MIT",
   "require" : {
     "zendframework/zend-mvc" : "~3.0",
-    "imagine/imagine" : "^0.6"
+    "imagine/imagine" : "^1.2"
   },
   "require-dev" : {
   },
