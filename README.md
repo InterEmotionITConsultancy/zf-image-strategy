@@ -1,6 +1,6 @@
 # README #
 
-Image Strategy for Zend MVC based applications using the Imagine OOP library.
+Image Strategy for Laminas MVC based applications using the Imagine OOP library.
 
 ### How do I get set up? ###
 

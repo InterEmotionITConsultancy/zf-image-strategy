@@ -1,9 +1,9 @@
 {
-  "name" : "interemotion/zf-image-strategy",
-  "description" : "An Image Strategy for Zend MVC based applications using the Imagine OOP library",
+  "name" : "interemotion/laminas-imagine-image-strategy",
+  "description" : "An Image Strategy for Laminas MVC based applications using the Imagine OOP library",
   "license": "MIT",
   "require" : {
-    "zendframework/zend-mvc" : "~3.0",
+    "laminas/laminas-mvc" : "~3.0",
     "imagine/imagine" : "^1.2"
   },
   "require-dev" : {
@@ -13,6 +13,6 @@
             "InterEmotion\\ImageStrategy\\": "src/"
         }
     },
-  "keywords" : [ "framework", "zf3", "imagine", "image strategy" ],
+  "keywords" : [ "framework", "laminas", "imagine", "image strategy" ],
   "homepage" : "http://www.interemotion.nl/"
 }

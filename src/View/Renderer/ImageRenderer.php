@@ -3,10 +3,9 @@ namespace InterEmotion\ImageStrategy\View\Renderer;
 
 use Imagine\Image\ImageInterface;
 use InterEmotion\ImageStrategy\View\Model\ImageModel;
-use Zend\View\Exception;
-use Zend\View\Model\ModelInterface as Model;
-use Zend\View\Renderer\RendererInterface as Renderer;
-use Zend\View\Resolver\ResolverInterface as Resolver;
+use Laminas\View\Exception;
+use Laminas\View\Renderer\RendererInterface as Renderer;
+use Laminas\View\Resolver\ResolverInterface as Resolver;
 
 /**
  * Image renderer
@@ -37,14 +36,9 @@ class ImageRenderer implements Renderer
         return $this;
     }
 
+
     /**
-     * Renders the image from the model
-     *
-     * @todo   Determine what use case exists for accepting both $nameOrModel and $values
-     * @param  string|Model $nameOrModel The script/resource process, or a view model
-     * @param  null|array|\ArrayAccess $values Values to use during rendering
-     * @throws Exception\DomainException
-     * @return string The script output.
+     * @inheritDoc
      */
     public function render($nameOrModel, $values = null)
     {
