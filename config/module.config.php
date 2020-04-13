@@ -3,7 +3,7 @@
 use InterEmotion\ImageStrategy\View\Factory\ImageStrategyFactory;
 use InterEmotion\ImageStrategy\View\Renderer\ImageRenderer;
 use InterEmotion\ImageStrategy\View\Strategy\ImageStrategy;
-use Zend\ServiceManager\Factory\InvokableFactory;
+use Laminas\ServiceManager\Factory\InvokableFactory;
 
 return array(
     'service_manager' => array(

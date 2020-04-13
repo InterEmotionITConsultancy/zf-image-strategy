@@ -1,8 +1,8 @@
 <?php
 namespace InterEmotion\ImageStrategy\View\Model;
 
-use Zend\View\Model\ViewModel;
 use Imagine\Image\ImageInterface;
+use Laminas\View\Model\ViewModel;
 
 class ImageModel extends ViewModel
 {
