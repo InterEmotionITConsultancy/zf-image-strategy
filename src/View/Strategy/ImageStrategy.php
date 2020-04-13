@@ -3,10 +3,10 @@ namespace InterEmotion\ImageStrategy\View\Strategy;
 
 use InterEmotion\ImageStrategy\View\Model\ImageModel;
 use InterEmotion\ImageStrategy\View\Renderer\ImageRenderer;
-use Zend\EventManager\AbstractListenerAggregate;
-use Zend\EventManager\EventManagerInterface;
-use Zend\Http\PhpEnvironment\Response;
-use Zend\View\ViewEvent;
+use Laminas\EventManager\AbstractListenerAggregate;
+use Laminas\EventManager\EventManagerInterface;
+use Laminas\Http\PhpEnvironment\Response;
+use Laminas\View\ViewEvent;
 
 class ImageStrategy extends AbstractListenerAggregate
 {
